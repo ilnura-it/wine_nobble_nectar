@@ -1,0 +1,132 @@
+@import '../../node_modules/swiper/swiper-bundle'
+@import 'libs/normalize'
+@import 'base/fonts'
+@import 'base/variables'
+@import 'base/mixins'
+@import 'base/keyframes'
+@import 'blocks/header'
+@import 'blocks/main'
+@import 'blocks/footer'
+
+
+
+
+body 
+    margin: 0
+    display: flex
+    flex-direction: column
+    background: $dark-color
+    font-family: $arsenal, sans-serif
+    color: $main-color
+    font-size: 16px
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    min-height: 100vh
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    &.locked 
+        overflow: hidden
+    @include sm 
+        font-size: 16px
+    
+
+
+* 
+    box-sizing: border-box
+    margin: 0
+
+
+html 
+    scroll-behavior: smooth
+
+
+header 
+    padding: 0
+
+button
+    padding: 0
+    background-color: transparent
+    border: none
+
+h1, h2, h3, h4 
+    margin: 0
+    font-weight: normal
+
+img
+    width: auto 
+    max-width: 100%
+    height: auto
+
+iframe, img, svg, video
+    max-width: 100%
+    vertical-align: top
+    height: auto
+
+p
+    margin: 0
+
+ul
+    margin: 0
+    padding-left: 0
+
+li
+    list-style-type: none
+
+a
+    text-decoration: none
+    
+.container 
+    max-width: 1240px
+    margin: 0 auto
+    padding: 0 20px
+    @media(max-width: 576px) 
+        padding: 0 15px
+
+   
+.section-title
+    font-family: $arina
+    font-size: 90px
+    line-height: 100%
+    &_wide
+        max-width: 688px
+    // @include md
+    //     font-size: 75px
+    //     line-height: 110%
+    @include sm
+        font-size: 80px
+    // @include xs
+    //     font-size: 45px
+    @include xxs
+        font-size: 38px
+
+.main-text
+    font-size: 18px
+    line-height: 160%
+    &_wide
+        max-width: 380px
+    &_mb
+        &:not(:last-child)
+            margin-bottom: 25px
+
+.mb_120
+    margin-bottom: 120px
+
+.pb_200
+    padding-bottom: 200px
+
+.pt_200
+    padding-top: 200px
+
+
+
+
+
+
+
+
+
+
+
+

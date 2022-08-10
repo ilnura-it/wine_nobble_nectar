@@ -7,28 +7,60 @@
 
 .promo
    margin-top: -90px
+   @include sm
+      margin-top: -68px
+   @include xxs
+      margin-top: -28px
    &__wrap
       display: flex
       align-items: stretch
       justify-content: flex-end
+      @include sm
+         max-width: 444px
+         margin-left: auto
+         flex-direction: column
+      @include sm
+         max-width: 100%
    &__info
       margin-right: 30px
       flex: 0 0 380px
+      @include sm
+         margin-right: 0
    &__img
       flex: 0 1 482px
       img
          height: 100%
          object-fit: cover
-
+      @include sm
+         height: 576px
+         flex: 0 1 auto
+         img
+            width: 100%
+      @include xxs
+         height: 360px
 .features
    &__wrap
       padding-left: 100px
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 132px
+      @include md
+         gap: 104px
+      @include sm
+         padding-left: 70px
+         padding-right: 100px
+         grid-template-columns: 1fr
+         gap: 100px
    &__item
+      @include sm
+         width: 400px
+      @include xxs
+         width: 278px
       &_reverse
          padding-top: 60px
+         @include sm
+            margin-left: auto
+            padding-top: 0
    &__name
       position: relative
       margin-top:-40px
@@ -38,6 +70,8 @@
       font-size: 70px
       line-height: 100%
       text-align: center
+      @include sm
+         margin-left: -70px
       &_bottom
          margin-top: 0
          margin-bottom: -40px
@@ -49,10 +83,17 @@
 .tradition
    padding-bottom: 340px
    background-color: $main-color
+   @include sm
+      padding-bottom: 614px
+   @include xxs
+      padding-bottom: 140px
    &__wrap
       display: flex
       justify-content: space-between
       align-items: flex-start
+      @include sm
+         position: relative
+         flex-direction: column
    &__left
       position: relative
       padding-left: calc((100% - 1200px)/2)
@@ -61,13 +102,26 @@
       margin-right: 132px
       @include md
          padding-left: 20px
+         margin-right: 70px
+      @include sm
+         position: initial
+         width: 100%
+         padding-right: 20px
       @include xxs
          padding-left: 15px
+         padding-right: 15px
    &__left-content
       width: 688px
+      @include md
+         width: 628px
+      @include sm
+         width: 100%
    &__right
       @media(min-width: 1920px)
          margin-right: calc((100% - 1900px)/2)
+      @include sm
+         margin-left: auto
+         width: 464px
    &__text
       margin-left: auto
    &__bottom
@@ -83,26 +137,48 @@
       img
          width: 100%
          height: 100%
+      @include sm
+         height: 514px
+      @include xxs
+         display: none
+
 .country
    @media(min-width: 1920px)
-         padding-top: 640px
+         padding-top: 610px
    padding-top: 510px
+   @include sm
+      padding-top: 200px
    &__title
       position: relative
    &__wrap
       display: flex
+      @include sm
+         flex-direction: column
    &__left
       display: flex
       flex-direction: column
       margin-right: 30px
       flex: 0 0 688px
+      @include md
+         flex: 0 0 628px
+      @include sm
+         margin-right: 0
+         flex: 0 1 auto
    &__img
       margin-left: auto
       width: 55%
       margin-top: -200px
+      img
+         width: 100%
+      @include sm
+         margin-top: -19%
+         margin-right: auto
+         width: 74%
    &__right
       align-self: flex-end
       padding-top: 360px
+      @include sm
+         padding-top: 0
    
 .story
    background: $main-color

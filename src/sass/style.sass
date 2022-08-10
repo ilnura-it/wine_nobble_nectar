@@ -29,7 +29,7 @@ body
     &.locked 
         overflow: hidden
     @include sm 
-        font-size: 16px
+        font-size: 17px
     
 
 
@@ -91,6 +91,8 @@ a
     line-height: 100%
     &_wide
         max-width: 688px
+        @include xs
+        max-width: 100%
     &_bright
         color: $bright-color
     // @include md
@@ -106,8 +108,14 @@ a
 .main-text
     font-size: 18px
     line-height: 160%
+    @include xxs
+        font-size: 17px
     &_wide
         max-width: 380px
+        @include sm
+            max-width: 444px
+        @include xxs
+            max-width: 100%
     &_mb
         &:not(:last-child)
             margin-bottom: 25px
@@ -115,6 +123,10 @@ a
         color: $dark-color
 .mb_120
     margin-bottom: 120px
+    @include sm
+    margin-bottom: 100px
+    @include xxs
+    margin-bottom: 70px
 
 .pb_200
     padding-bottom: 200px

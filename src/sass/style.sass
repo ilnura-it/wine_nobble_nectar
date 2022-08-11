@@ -103,6 +103,8 @@ a
     // @include xs
     //     font-size: 45px
     @include xxs
+        font-size: 48px
+    @include mini
         font-size: 38px
 
 .main-text
@@ -130,9 +132,12 @@ a
 
 .pb_200
     padding-bottom: 200px
-
+    @include xxs
+        padding-bottom: 140px
 .pt_200
     padding-top: 200px
+    @include xxs
+        padding-top: 140px
 
 .footer-text
     font-size: 18px
